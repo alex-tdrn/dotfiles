@@ -1,0 +1,93 @@
+{
+    "layer": "top", // Waybar at top layer
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": [],
+    "modules-right": ["custom/spotify_title", "custom/spotify_previous", "custom/spotify_play_pause", 
+"custom/spotify_next", "pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
+     "sway/workspaces": {
+         "all-outputs": true,
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "10": "",
+             "5": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% "
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "interval": 10,
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", ""]
+        },
+	"tooltip": "echo caca",
+        "on-click": "pulsemixer --toggle-mute",
+	"on-scroll-up": "pulsemixer --change-volume +1",
+	"on-scroll-down": "pulsemixer --change-volume -1"
+    },
+    "custom/spotify_title": {
+        "format": "{}",
+        "max-length": 100,
+        "exec": "$HOME/scripts/print_current_song.sh"
+    },
+    "custom/spotify_play_pause": {
+        "format": "{}",
+        "max-length": 10,
+        "exec": "playerctl status --follow | $HOME/scripts/print_player_status.sh",
+	"on-click": "playerctl play-pause"
+    },
+    "custom/spotify_previous": {
+        "format": "{}",
+        "max-length": 100,
+	"interval": 10000000,
+	"exec": "echo ",
+        "on-click": "playerctl previous"
+    },
+    "custom/spotify_next": {
+        "format": "{}",
+        "max-length": 100,
+	"interval": 1000000,
+	"exec": "echo ",
+        "on-click": "playerctl next"
+    }
+}
