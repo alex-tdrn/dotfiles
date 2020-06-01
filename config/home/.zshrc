@@ -92,10 +92,7 @@ zinit light-mode for \
     zsh-users/zsh-completions\
     romkatv/powerlevel10k
 
-#zinit snippet OMZ::plugins/timer/timer.plugin.zsh
 zinit snippet OMZ::plugins/fzf/fzf.plugin.zsh
-
-source /usr/share/doc/pkgfile/command-not-found.bash
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

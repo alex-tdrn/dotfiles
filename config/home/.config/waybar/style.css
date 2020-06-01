@@ -1,4 +1,4 @@
-@import "/home/alex-tdrn/.cache/wal/colors-waybar.css";
+@import "/home/alex_tdrn/.cache/wal/colors-waybar.css";
 
 * {
     border: none;
@@ -12,7 +12,7 @@
 
 window#waybar {
     border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-    background:@background-transparent;
+    background:rgba(0, 0, 0, 1.0);
     color: @foreground;
 }
 
