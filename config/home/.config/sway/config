@@ -185,6 +185,7 @@ bindsym $mod+bracketleft gaps inner all minus 10px
 bindsym $mod+Shift+b exec ~/scripts/change_wallpaper.sh
 
 for_window [class="Spotify"] move container to workspace 10
+for_window [class="Telegram"] move container to workspace 9
 
 # Status Bar:
 #
@@ -192,5 +193,6 @@ for_window [class="Spotify"] move container to workspace 10
 
 exec waybar
 exec spotify
+exec telegram
 exec_always ~/scripts/change_wallpaper.sh
 exec flashfocus

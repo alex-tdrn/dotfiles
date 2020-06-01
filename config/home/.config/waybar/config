@@ -1,22 +1,36 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
     "modules-center": [],
-    "modules-right": ["custom/spotify_title", "custom/spotify_previous", "custom/spotify_play_pause", 
-"custom/spotify_next", "pulseaudio", "network", "cpu", "memory", "battery", "clock", "tray"],
-     "sway/workspaces": {
-         "all-outputs": true,
-         "format": "{name}: {icon}",
-         "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "10": "",
-             "5": "",
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         }
+    "modules-right": [
+        "custom/spotify_title",
+        "custom/spotify_previous",
+        "custom/spotify_play_pause",
+        "custom/spotify_next",
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "battery",
+        "clock",
+        "tray"
+    ],
+    "sway/workspaces": {
+        "all-outputs": true,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "9": "",
+            "10": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -43,7 +57,13 @@
         "format": "{capacity}% {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "network": {
         "interval": 10,
@@ -58,12 +78,15 @@
         "format-bluetooth": "{volume}% {icon}",
         "format-muted": "",
         "format-icons": {
-            "default": ["", ""]
+            "default": [
+                "",
+                ""
+            ]
         },
-	"tooltip": "echo caca",
+        "tooltip": "echo caca",
         "on-click": "pulsemixer --toggle-mute",
-	"on-scroll-up": "pulsemixer --change-volume +1",
-	"on-scroll-down": "pulsemixer --change-volume -1"
+        "on-scroll-up": "pulsemixer --change-volume +1",
+        "on-scroll-down": "pulsemixer --change-volume -1"
     },
     "custom/spotify_title": {
         "format": "{}",
@@ -74,20 +97,20 @@
         "format": "{}",
         "max-length": 10,
         "exec": "playerctl status --follow | $HOME/scripts/print_player_status.sh",
-	"on-click": "playerctl play-pause"
+        "on-click": "playerctl play-pause"
     },
     "custom/spotify_previous": {
         "format": "{}",
         "max-length": 100,
-	"interval": 10000000,
-	"exec": "echo ",
+        "interval": 10000000,
+        "exec": "echo ",
         "on-click": "playerctl previous"
     },
     "custom/spotify_next": {
         "format": "{}",
         "max-length": 100,
-	"interval": 1000000,
-	"exec": "echo ",
+        "interval": 1000000,
+        "exec": "echo ",
         "on-click": "playerctl next"
     }
 }
