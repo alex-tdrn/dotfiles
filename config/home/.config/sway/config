@@ -177,9 +177,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-set $white #FFFFFF
-set $transparent #00000000
-set $black #000000
 # Layout
 gaps inner 20px
 default_border none
@@ -196,3 +193,4 @@ for_window [class="Spotify"] move container to workspace 10
 exec waybar
 exec spotify
 exec_always ~/scripts/change_wallpaper.sh
+exec flashfocus
