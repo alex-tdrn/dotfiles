@@ -1,0 +1,14 @@
+window {
+    background-color: --wofi-color0; 
+    color: --wofi-color7;
+}
+
+#input {
+    background-color: --wofi-color7; 
+    color: --wofi-color0;
+}
+
+
+#scroll {
+    color: --wofi-colo1;
+}

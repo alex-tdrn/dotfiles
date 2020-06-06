@@ -1,7 +1,7 @@
 cat ~/.cache/wal/sequences
 source ~/.cache/wal/colors-tty.sh
 
-neofetch
+#neofetch
 
 # The following lines were added by compinstall
 
