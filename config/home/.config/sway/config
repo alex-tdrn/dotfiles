@@ -17,6 +17,7 @@ exec $terminal
 workspace 1
 exec firefox
 exec flashfocus
+exec autotiling
 
 # Activate extra input devices
 input "2:14:ETPS/2_Elantech_TouchPad" 
