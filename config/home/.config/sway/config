@@ -52,7 +52,7 @@ set $menu wofi --show drun
 #
    input "2:14:ETPS/2_Elantech_TouchPad" {
        dwt enabled
-#       tap enabled
+       tap enabled
        natural_scroll enabled
        middle_emulation enabled
    }
@@ -186,13 +186,15 @@ bindsym $mod+Shift+b exec ~/scripts/change_wallpaper.sh
 
 for_window [class="Spotify"] move container to workspace 10
 for_window [class="Telegram"] move container to workspace 9
+for_window [class="Firefox"] move container to workspace 1
 
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 
+exec_always ~/scripts/change_wallpaper.sh
 exec waybar
+exec firefox
 exec spotify
 exec telegram
-exec_always ~/scripts/change_wallpaper.sh
 exec flashfocus
