@@ -182,7 +182,8 @@ gaps inner 20px
 default_border none
 bindsym $mod+bracketright gaps inner all plus 10px
 bindsym $mod+bracketleft gaps inner all minus 10px
-bindsym $mod+Shift+b exec ~/scripts/change_wallpaper.sh
+bindsym $mod+Shift+b exec ~/scripts/change_wallpaper_dark.sh
+bindsym $mod+Alt+b exec ~/scripts/change_wallpaper_light.sh
 
 for_window [class="Spotify"] move container to workspace 10
 for_window [class="Telegram"] move container to workspace 9
@@ -192,7 +193,6 @@ for_window [class="Firefox"] move container to workspace 1
 #
 # Read `man 5 sway-bar` for more information about this section.
 
-exec_always ~/scripts/change_wallpaper.sh
 exec waybar
 exec firefox
 exec spotify
