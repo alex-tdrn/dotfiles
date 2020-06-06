@@ -18,6 +18,7 @@ workspace 1
 exec firefox
 exec flashfocus
 exec autotiling
+exec redshift
 
 # Activate extra input devices
 input "2:14:ETPS/2_Elantech_TouchPad" 
