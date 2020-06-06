@@ -41,7 +41,7 @@ bindsym $mod+bracketleft gaps inner all minus 10px
 floating_modifier $mod normal
 
 bindsym $mod+t exec $terminal
-bindsym $mod+s+r exec $menu
+bindsym $mod+s exec $menu
 bindsym $mod+Shift+b exec $change_wallpaper_dark
 bindsym $mod+Alt+b exec $change_wallpaper_light
 

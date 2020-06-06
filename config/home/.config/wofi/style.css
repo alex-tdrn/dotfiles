@@ -1,0 +1,12 @@
+window {
+    background-color: --wofi-color0; 
+}
+
+#input {
+    background-color: --wofi-color7; 
+}
+
+
+#scroll {
+    color: #ccc;
+}
