@@ -2,8 +2,8 @@
 set $terminal alacritty
 set $menu wofi --show drun
 set $mod Mod4
-set $change_wallpaper_dark sh -c "$(~/scripts/change_wallpaper_dark.sh) && $(pkill waybar) && $(waybar)"
-set $change_wallpaper_light sh -c "$(~/scripts/change_wallpaper_light.sh) && $(pkill waybar) && $(waybar)"
+set $change_wallpaper_dark sh -c "$(~/scripts/change_wallpaper.sh) && $(pkill waybar) && $(waybar)"
+set $change_wallpaper_light sh -c "$(~/scripts/change_wallpaper.sh -l) && $(pkill waybar) && $(waybar)"
 
 # Launch programs and run scripts
 exec_always $change_wallpaper_dark
