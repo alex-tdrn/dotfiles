@@ -40,6 +40,15 @@ bindsym $mod+bracketright gaps inner all plus 10px
 bindsym $mod+bracketleft gaps inner all minus 10px
 floating_modifier $mod normal
 
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
+
 bindsym $mod+t exec $terminal
 bindsym $mod+s exec $menu
 bindsym $mod+b exec $change_wallpaper_dark
