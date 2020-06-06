@@ -42,8 +42,8 @@ floating_modifier $mod normal
 
 bindsym $mod+t exec $terminal
 bindsym $mod+s exec $menu
-bindsym $mod+Shift+b exec $change_wallpaper_dark
-bindsym $mod+Alt+b exec $change_wallpaper_light
+bindsym $mod+b exec $change_wallpaper_dark
+bindsym $mod+Shift+b exec $change_wallpaper_light
 
 bindsym $mod+Left workspace prev
 bindsym $mod+Right workspace next 
