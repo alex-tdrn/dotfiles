@@ -82,11 +82,7 @@
                 "",
                 ""
             ]
-        },
-        "tooltip": "echo caca",
-        "on-click": "pulsemixer --toggle-mute",
-        "on-scroll-up": "pulsemixer --change-volume +1",
-        "on-scroll-down": "pulsemixer --change-volume -1"
+        }
     },
     "custom/spotify_title": {
         "format": "{}",
