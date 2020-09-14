@@ -4,13 +4,10 @@
         "sway/workspaces",
         "sway/mode"
     ],
-    "modules-center": [],
+    "modules-center": [
+		
+    ],
     "modules-right": [
-        "custom/spotify_title",
-        "custom/spotify_previous",
-        "custom/spotify_play_pause",
-        "custom/spotify_next",
-        "pulseaudio",
         "network",
         "cpu",
         "memory",
@@ -108,5 +105,9 @@
         "interval": 1000000,
         "exec": "echo ",
         "on-click": "playerctl next"
+    },
+    "custom/journal": {
+        "format": "{}",
+ 	"exec": "journalctl -b -f -o cat"
     }
 }
