@@ -12,8 +12,7 @@
         "cpu",
         "memory",
         "battery",
-        "clock",
-        "tray"
+        "clock"
     ],
     "sway/workspaces": {
         "all-outputs": true,
@@ -37,7 +36,8 @@
         "spacing": 10
     },
     "clock": {
-        "format-alt": "{:%Y-%m-%d}"
+	"format": "{:%H:%M %d-%b-%Y}",
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
         "format": "{usage}% "
