@@ -5,10 +5,10 @@
         "sway/mode"
     ],
     "modules-center": [
-		
     ],
     "modules-right": [
         "network",
+	"temperature",
         "cpu",
         "memory",
         "battery",
@@ -31,9 +31,12 @@
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+    "temperature": {
+	"thermal-zone": 2,
+	"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+	"critical-threshold": 80,
+	"format-critical": "{temperatureC}°C ",
+	"format": "{temperatureC}°C "
     },
     "clock": {
 	"format": "{:%H:%M %d-%b-%Y}",
@@ -63,48 +66,11 @@
         ]
     },
     "network": {
-        "interval": 1,
+        "interval": 10,
 	"tooltip-format": "Interface: {ifname}\nIP: {ipaddr}",
         "format-wifi": "{essid} ({signalStrength}%): {bandwidthUpOctets}   {bandwidthDownOctets} ",
         "format-ethernet": "{bandwidthUpOctets}   {bandwidthDownOctets} ",
         "format-disconnected": "Disconnected"
-    },
-    "pulseaudio": {
-        //"scroll-step": 1,
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "default": [
-                "",
-                ""
-            ]
-        }
-    },
-    "custom/spotify_title": {
-        "format": "{}",
-        "max-length": 100,
-        "exec": "$HOME/scripts/print_current_song.sh"
-    },
-    "custom/spotify_play_pause": {
-        "format": "{}",
-        "max-length": 10,
-        "exec": "playerctl status --follow | $HOME/scripts/print_player_status.sh",
-        "on-click": "playerctl play-pause"
-    },
-    "custom/spotify_previous": {
-        "format": "{}",
-        "max-length": 100,
-        "interval": 10000000,
-        "exec": "echo ",
-        "on-click": "playerctl previous"
-    },
-    "custom/spotify_next": {
-        "format": "{}",
-        "max-length": 100,
-        "interval": 1000000,
-        "exec": "echo ",
-        "on-click": "playerctl next"
     },
     "custom/journal": {
         "format": "{}",
