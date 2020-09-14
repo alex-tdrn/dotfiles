@@ -18,7 +18,7 @@ font:
   bold_italic:
     family: Meslo LGS NF
     style: Bold Italic
-  size: 10.0
+  size: 11.0
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Any items in the `env` entry below will be added as
