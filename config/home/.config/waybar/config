@@ -63,11 +63,11 @@
         ]
     },
     "network": {
-        "interval": 10,
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠"
+        "interval": 1,
+	"tooltip-format": "Interface: {ifname}\nIP: {ipaddr}",
+        "format-wifi": "{essid} ({signalStrength}%): {bandwidthUpOctets}   {bandwidthDownOctets} ",
+        "format-ethernet": "{bandwidthUpOctets}   {bandwidthDownOctets} ",
+        "format-disconnected": "Disconnected"
     },
     "pulseaudio": {
         //"scroll-step": 1,
