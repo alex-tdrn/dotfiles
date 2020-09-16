@@ -41,8 +41,8 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+q kill
 bindsym $mod+f fullscreen
-bindsym $mod+bracketright gaps inner all plus 10px
-bindsym $mod+bracketleft gaps inner all minus 10px
+bindsym $mod+bracketright gaps inner current plus 10px
+bindsym $mod+bracketleft gaps inner current minus 10px
 floating_modifier $mod normal
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
