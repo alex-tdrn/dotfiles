@@ -33,6 +33,7 @@ input "2:14:ETPS/2_Elantech_TouchPad"
 
 # Set layout preferences
 gaps inner 20px
+gaps top -20px
 default_border none
 
 # Bind hotkeys
