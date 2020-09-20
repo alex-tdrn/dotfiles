@@ -1,8 +1,8 @@
 # Set variables
 set $terminal alacritty
 set $menu wofi --show drun
-set $change_wallpaper_dark sh -c "$(~/scripts/change_wallpaper.sh) && $(pkill waybar) && $(waybar)"
-set $change_wallpaper_light sh -c "$(~/scripts/change_wallpaper.sh -l) && $(pkill waybar) && $(waybar)"
+set $change_wallpaper_dark sh -c "$(~/scripts/change_wallpaper_dark.sh) && $(pkill waybar) && $(waybar)"
+set $change_wallpaper_light sh -c "$(~/scripts/change_wallpaper_light.sh) && $(pkill waybar) && $(waybar)"
 set $mod Mod4
 
 # Launch programs and run scripts
