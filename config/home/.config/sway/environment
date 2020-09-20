@@ -1,4 +1,4 @@
-MOZ_ENABLE_WAYLAND=1
-QT_QPA_PLATFORM=wayland
-SDL_VIDEODRIVER=wayland
-CLUTTER_BACKEND=wayland
+export MOZ_ENABLE_WAYLAND='1'
+export QT_QPA_PLATFORM='wayland'
+export SDL_VIDEODRIVER='wayland'
+export CLUTTER_BACKEND='wayland'

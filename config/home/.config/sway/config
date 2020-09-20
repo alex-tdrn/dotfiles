@@ -17,7 +17,6 @@ exec $terminal
 exec $terminal
 workspace 1
 exec firefox
-exec firefox
 exec flashfocus
 exec autotiling
 exec redshift
