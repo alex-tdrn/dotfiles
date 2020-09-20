@@ -5,6 +5,9 @@ set $change_wallpaper_dark sh -c "$(~/scripts/change_wallpaper_dark.sh) && $(pki
 set $change_wallpaper_light sh -c "$(~/scripts/change_wallpaper_light.sh) && $(pkill waybar) && $(waybar)"
 set $mod Mod4
 
+# Disable freesync because of flickering issues
+output * adaptive_sync off
+
 # Launch programs and run scripts
 exec_always $change_wallpaper_dark
 
