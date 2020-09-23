@@ -32,10 +32,16 @@ input "2:14:ETPS/2_Elantech_TouchPad"
     middle_emulation enabled
 }
 
-# Set layout preferences
+# Set style preferences
 gaps inner 20px
 gaps top -20px
 default_border none
+titlebar_border_thickness 0
+titlebar_padding 10
+font source code pro semibold 10
+client.unfocused #FFFFFF00 #00000088 #FFFFFFFF
+client.focused #FFFFFF00 #808080FF #000000FF
+client.focused_inactive #FFFFFF00 #808080FF #000000FF
 
 # Bind hotkeys
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
@@ -44,6 +50,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+f fullscreen
 bindsym $mod+bracketright gaps inner current plus 10px
 bindsym $mod+bracketleft gaps inner current minus 10px
+bindsym $mod+Space layout toggle split tabbed
 floating_modifier $mod normal
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -60,8 +67,8 @@ bindsym $mod+s exec $menu
 bindsym $mod+b exec $change_wallpaper_dark
 bindsym $mod+Shift+b exec $change_wallpaper_light
 
-bindsym $mod+Left workspace prev
-bindsym $mod+Right workspace next 
+bindsym $mod+tab workspace next_on_output 
+bindsym $mod+Shift+tab workspace prev_on_output
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
