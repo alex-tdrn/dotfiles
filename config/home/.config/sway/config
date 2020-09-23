@@ -38,6 +38,7 @@ gaps top -20px
 default_border none
 titlebar_border_thickness 0
 titlebar_padding 10
+title_align center
 font source code pro semibold 10
 client.unfocused #FFFFFF00 #00000088 #FFFFFFFF
 client.focused #FFFFFF00 #808080FF #000000FF
