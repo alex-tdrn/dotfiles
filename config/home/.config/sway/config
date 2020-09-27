@@ -13,8 +13,9 @@ exec_always $change_wallpaper_dark
 
 workspace 10
 exec spotify
-workspace 9
 exec telegram-desktop
+workspace 8
+exec corectrl
 workspace 2
 exec $terminal
 exec $terminal
@@ -22,6 +23,7 @@ workspace 1
 exec firefox
 exec flashfocus
 exec autotiling
+
 
 # Activate extra input devices
 input "2:14:ETPS/2_Elantech_TouchPad" 
